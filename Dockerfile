@@ -1,9 +1,11 @@
-FROM python:3.8
-LABEL maintainer="Katie Gamanji"
+FROM golang:alpine
 
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
+WORKDIR /go/src/app
 
-# command to run on container start
-CMD [ "python", "app.py" ]
+ADD . .
+
+RUN go build -o main
+
+EXPOSE 6111
+
+CMD ["./main"]
