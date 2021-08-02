@@ -11,4 +11,4 @@ To run the application, use the following command:
 go run main.go 
 ```
 
-Access the application on: http://127.0.0.1:6111/
+Access the application on: http://127.0.0.1:6111/ 
